@@ -97,20 +97,20 @@ void loop() {
   drawDigit2_1();
   drawDigit3_1();
   drawDigit4_1();
+  if (dot) {
+    digitalWrite(DIG10, 0);
+  }
+  delay(1);
+  digitalWrite(DIG10, 1);
 
   digitalWrite(V1, 0);
-   digitalWrite(V2, 1);
-   drawDigit1_2();
-   drawDigit2_2();
-   drawDigit3_2();
-   drawDigit4_2();
-   if (dot) {
-     digitalWrite(DIG10, 1);
-     delay(1);
-     digitalWrite(DIG10, 0);
-   }
-   digitalWrite(V2, 0);
 
+  digitalWrite(V2, 1);
+  drawDigit1_2();
+  drawDigit2_2();
+  drawDigit3_2();
+  drawDigit4_2();
+  digitalWrite(V2, 0);
 }
 
 void drawDigit1_2() {
